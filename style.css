@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  /* colors */
+  --primary: 4, 100%, 67%;
+  --dark-slate-gray: 234, 29%, 20%;
+  --charcoal-grey: 235, 18%, 26%;
+  --grey: 231, 7%, 60%;
+  --white: 0, 0%, 100%;
+
+  /* fonts */
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* attribution */
+  --canary-yellow: 52, 100%, 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(var(--dark-slate-gray));
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: auto;
+  color:hsl(var(--white));
+}
+
+.attribution a {
+  color: hsl(var(--canary-yellow));
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--white));
+  min-width: 23.4375rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.image-wrapper .desktop-img {
+  display: none;
+}
+
+.content-wrapper {
+  padding: 2.5rem 1.25rem;
+}
+
+.content h1 {
+  font-size: 1.875rem;
+  margin-top: 0;
+}
+
+.content p {
+  max-width: 18.125rem;
+  font-size: 0.9375rem;
+  margin-bottom: 1.875rem;
+}
+
+.info-list {
+  position: relative;
+  list-style: none;
+  max-width: 17.8125rem;
+  font-size: 0.9375rem;
+  margin-bottom: 3.125rem;
+}
+
+.info-list li {
+  margin-bottom: 1.25rem;
+}
+
+.info-list li::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-image: url(https://ernestosalazar.github.io/newsletter-sign-up-form-with-success-message/assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1.25rem;
+  height: 1.25rem;
+  left: 0;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;;
+}
+
+label {
+  position: relative;
+  color: hsl(var(--dark-slate-gray));
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+}
+
+label span {
+  position: absolute;
+  display: none;
+  right: 0;
+}
+
+input[type="email"] {
+  display: block;
+  width: 100%;
+  height: 3.4375rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid hsl(var(--grey));
+  padding: 0 1.4375rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+  outline: none;
+}
+
+input[type="email"]:focus {
+  border: 0.0625rem solid hsl(var(--dark-slate-gray));
+}
+
+.input-error span {
+  position: absolute;
+  color: hsl(var(--primary));
+  right: 0;
+}
+
+.input-error input {
+  border: 0.0625rem solid hsl(var(--primary));;
+  background-color: hsl(5, 100%, 95%);
+  color: hsl(3, 66%, 65%);
+}
+
+button {
+  background-color: hsl(var(--charcoal-grey));
+  border: none;
+  border-radius: 0.3125rem;
+  min-height: 3.4375rem;
+  font-weight: var(--font-weight-bold);
+  color: hsl(var(--white));
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(var(--primary));
+}
+
+.success-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 23.4375rem;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--white));
+  padding: 8.75rem 1.25rem 2.1875rem;
+  overflow: hidden;
+}
+
+.success-section img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.success-section h1 {
+  font-size: 3.125rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.success-section p {
+  margin: 0;
+}
+
+.success-section button {
+  margin-top: auto;
+}
+
+.success-section button:hover {
+  background-color: hsl(var(--primary));
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: auto;
+    width: fit-content;
+  }
+
+  .login-section {
+    flex-direction: row-reverse;
+    margin-top: auto;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
+    min-width: 58.125rem;
+  }
+
+  .image-wrapper .mobile-img {
+    display: none;
+  }
+
+  .image-wrapper .desktop-img {
+    display: block;
+  }
+
+  .content-wrapper {
+    padding-top: 4.375rem;
+    padding-right: 3.75rem;
+    padding-left: 3.125rem;
+    flex-grow: 1;
+  }
+
+  .content h1 {
+    font-size: 3.125rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  .content p {
+    max-width: 21.875rem;
+  }
+
+  .info-list {
+    max-width: fit-content;
+    padding-left: 1.875rem;
+  }
+
+  .success-section {
+    min-width: 31.25rem;
+    min-height: 32.8125rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1.25rem;
+    padding-top: 2.8125rem;
+    padding-bottom: 4.0625rem;
+    padding: 2.8125rem 4.0625rem 3.75rem;
+  }
+
+  .success-section h1 {
+    max-width: 20rem;
+  }
+
+  .success-section p {
+    max-width: 23.75rem;
+    margin-bottom: 2.8125rem;
+  }
+
+}
+
